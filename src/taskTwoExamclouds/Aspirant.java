@@ -1,6 +1,4 @@
-package taskTwoExamclouds.Aspirant;
-
-import taskTwoExamclouds.Student.Student;
+package taskTwoExamclouds;
 
 /**
  * This class contains information about Phdstudent'es.
@@ -10,10 +8,9 @@ import taskTwoExamclouds.Student.Student;
  * @data 09.08.2022
  */
 
-
 public class Aspirant extends Student {
 
-    String scientificWork;
+    private String scientificWork;
 
     public Aspirant(String firstName, String lastName, int group, double averageMark, String scientificWork) {
         super(firstName, lastName, group, averageMark);
@@ -22,11 +19,11 @@ public class Aspirant extends Student {
 
     @Override
     public double getScholarship() {
-        if (averageMark == 5) {
+        if (getAverageMark() == 5) {
             System.out.println("Заслужил!");
             double money = 200;
             return money;
-        } else if (averageMark < 5) {
+        } else if (getAverageMark() < 5) {
             System.out.println("Есть к чему стремиться!");
             double money = 130;
             return money;
@@ -34,5 +31,9 @@ public class Aspirant extends Student {
             System.out.println("Таким способным стипендия не нужна.");
             return 0;
         }
+    }
+
+    public String getScientificWork() {
+        return scientificWork;
     }
 }

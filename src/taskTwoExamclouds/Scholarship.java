@@ -1,7 +1,4 @@
-package taskTwoExamclouds.Scholarship;
-
-import taskTwoExamclouds.Aspirant.Aspirant;
-import taskTwoExamclouds.Student.Student;
+package taskTwoExamclouds;
 
 /**
  * This class displays information about the scholarship of students.
@@ -18,13 +15,9 @@ public class Scholarship {
 
         Student[] classroom = {firstAspirant, secondAspirant, thridAspirant};
 
-        System.out.println("У Винии на мёд: " + classroom[0].getScholarship() + "р.");
-        System.out.println();
-
-        System.out.println("У Пяточка на новые шарики: " + classroom[1].getScholarship() + "р.");
-        System.out.println();
-
-        System.out.println("Сбережения Ослика в горшочке: " + classroom[2].getScholarship() + "р.");
-        System.out.println();
+        for (Student students : classroom) {
+            System.out.println(students.getScholarship());
+            System.out.println();
+        }
     }
 }

@@ -1,4 +1,4 @@
-package taskTwoExamclouds.Student;
+package taskTwoExamclouds;
 
 /**
  * This class contains information about students.
@@ -10,10 +10,10 @@ package taskTwoExamclouds.Student;
 
 public class Student {
 
-    String firstName;
-    String lastName;
-    int group;
-    public double averageMark;
+    private String firstName;
+    private String lastName;
+    private int group;
+    private double averageMark;
 
     public Student(String firstName, String lastName, int group, double averageMark) {
         this.firstName = firstName;
@@ -35,5 +35,21 @@ public class Student {
             System.out.println("Нужно сидеть не за партой.");
             return 0;
         }
+    }
+
+    public String getFirstName() {
+        return firstName;
+    }
+
+    public String getLastName() {
+        return lastName;
+    }
+
+    public int getGroup() {
+        return group;
+    }
+
+    public double getAverageMark() {
+        return averageMark;
     }
 }
